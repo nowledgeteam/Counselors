@@ -490,7 +490,36 @@
     letter-spacing: -0.02em;
   }
   @media (max-width: 768px) {
-    .header { padding: 16px 20px; }
+    /* Header — prevent badge crowding logo */
+    .header { padding: 14px 16px; flex-wrap: wrap; gap: 8px; }
+    .header-logo-wrap { flex: 1; min-width: 0; }
+    .header-wordmark { font-size: 22px; }
+    .header-mark { height: 28px; }
+    .header-badge {
+      font-size: 10px;
+      padding: 5px 10px;
+      border-radius: 14px;
+      white-space: normal;
+      text-align: center;
+      width: 100%;
+      display: block;
+    }
+
+    /* Formula — stack pills vertically */
+    .how-intro { flex-direction: column; gap: 20px; }
+    .how-formula {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      width: 100%;
+    }
+    .formula-pill { width: 100%; text-align: center; font-size: 13px; padding: 10px 16px; }
+    .fp-arrow { display: none; }
+    .fp-eq { display: none; }
+    .fp-milestone { margin-bottom: 4px; }
+    .fp-result { margin-top: 4px; }
+
+    /* Other mobile fixes */
     .hero { padding: 48px 20px 56px; }
     .stat-bar { padding: 32px 20px; gap: 36px; }
     .section { padding: 48px 20px; }
@@ -502,7 +531,6 @@
     .offer-box { padding: 24px 20px; flex-direction: column; }
     .footer { padding: 24px 20px; }
     .footer-right { text-align: left; }
-    .how-formula { justify-content: flex-start; }
   }
 </style>
 </head>
